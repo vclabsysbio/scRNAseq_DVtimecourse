@@ -16,15 +16,19 @@ This pipeline analyses use  R studio V. 3.1.4 and the packages:
 
 # Overview of quality control
 
+![Screen Shot 2563-07-31 at 16.53.58](/home/reena/Downloads/Screen Shot 2563-07-31 at 16.53.58.png)
+
 Aim : 
 
 1. To draw overall of QC steps
-
 2.  To briefly explain why we need to run each step
-
 3. To briefly explain how each step work 
 
-   
+
+
+To adjust the potential contaminate RNA, SoupX was applied
+
+
 
 Mapping --> SoupX --> cutting 10%mito --> DoubleFinder
 
