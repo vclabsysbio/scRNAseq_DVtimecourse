@@ -39,7 +39,7 @@ for (RN in 1:length(Input_SeuratObjList_10Samples_After_AddingMetadata_Spliced))
 }
 
 # Integration process
-ntegration_features <- SelectIntegrationFeatures(object.list = Input_SeuratObjList_10Samples_After_AddingMetadata_Spliced, nfeatures = 3000)
+Integration_features <- SelectIntegrationFeatures(object.list = Input_SeuratObjList_10Samples_After_AddingMetadata_Spliced, nfeatures = 3000)
 Input_SeuratObjList_10Samples_After_AddingMetadata_Spliced <- PrepSCTIntegration(object.list = Input_SeuratObjList_10Samples_After_AddingMetadata_Spliced, anchor.features = Integration_features, verbose = FALSE)
 
 # Find anchors
