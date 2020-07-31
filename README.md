@@ -16,7 +16,9 @@ This pipeline analyses use  R studio V. 3.1.4 and the packages:
 
 # Overview of quality control
 
-![Screen Shot 2563-07-31 at 16.53.58](/home/reena/Downloads/Screen Shot 2563-07-31 at 16.53.58.png)
+![overview](/home/icbs_shared_storage_yod/Jantarika/10X_PBMC_29072018/GitHub_new/scRNAseq_DVtimecourse/overview.png)
+
+![overview](/home/reena/Downloads/overview.png)
 
 Aim : 
 
