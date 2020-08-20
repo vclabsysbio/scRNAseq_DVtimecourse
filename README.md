@@ -2,17 +2,17 @@
 
 ### Environment & Dependencies
 
-- [Cell Ranger](https://support.10xgenomics.com/single-cell-gene-expression/software/pipelines/latest/what-is-cell-ranger) V. 3.0.2
+- [Cell Ranger](https://support.10xgenomics.com/single-cell-gene-expression/software/downloads/latest) V. 3.0.2
 
 This pipeline analyses use  R studio V. 4.0.2 and the packages: 
 
 - [SoupX](https://github.com/constantAmateur/SoupX) V.1.4.5
-- DoubletFinder V.2.0.3
-- Seurat V. 3.1.2
-- Monocle3 V.
-- gProfier2 V.0.1.9
+- [DoubletFinder](https://github.com/chris-mcginnis-ucsf/DoubletFinder) V.2.0.3
+- [Seurat](https://satijalab.org/seurat/) V. 3.1.2
+- [Monocle3](https://cole-trapnell-lab.github.io/monocle3/docs/installation/) V.
+- [gProfiler2](https://biit.cs.ut.ee/gprofiler/page/r) V.0.1.9
 
-Docker is provided (link to Docker)
+
 
 # Data
 
@@ -22,7 +22,9 @@ Raw files are deposited in ArrayExpress, under accession number E-MTAB-9467
 
 # Data Mapping 
 
-CellRanger V. 3.0.2 and human reference GRCh38-1.2.0 were used in these datasets
+Docker is provided (link to Docker)
+
+[Cell Ranger](https://support.10xgenomics.com/single-cell-gene-expression/software/downloads/latest) V. 3.0.2 and human reference GRCh38-1.2.0 were used in these datasets
 
 Running command as following 
 
@@ -37,6 +39,8 @@ cellranger count --id= sample id \
 
 # Workflow of downstream analyses
 
+Docker is provided (link to Docker)
+
 1. Quality control 
    - Correct the expression profiles using SoupX
    - Exclude the cells that have high percentage of mitochondrial counts
@@ -50,7 +54,7 @@ cellranger count --id= sample id \
 
    - Investigate Pearson Correlation Coefficient and PCAs
    - Construct unsupervised hierarchical clustering from top 500 genes on PCs
-   - Investigate GO enrichments of each cluster using gProfier2 
+   - Investigate GO enrichments of each cluster using gProfiler2 
 
 4. Trajectory and pseudotime analyses 
 
