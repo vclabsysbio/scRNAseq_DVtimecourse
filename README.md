@@ -26,7 +26,7 @@ Docker is provided (link to Docker)
 
 [Cell Ranger](https://support.10xgenomics.com/single-cell-gene-expression/software/downloads/latest) V. 3.0.2 and human reference GRCh38-1.2.0 are applied 
 
-Running command as following 
+Running command as follows: 
 
 cellranger count --id= sample id \
                               --transcriptome=PATH_TO_REF \
@@ -59,7 +59,7 @@ Docker is provided (link to Docker)
 4. Trajectory and pseudotime analyses 
 
    - Create Monocle's object using the information from Seurat's object 
-- Construct trajectory and pseudotime using Monocle3
+   - Construct trajectory and pseudotime using Monocle3
    - Set Naive at the root of pseudotime for CD4+ T cells and B cell subpopulations
    - Set Effector CD8-3 at the root for effector CD8+ subpopulations
 
