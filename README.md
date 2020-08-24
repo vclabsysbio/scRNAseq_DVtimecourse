@@ -1,16 +1,12 @@
-# Single-cell Temporal Analysis of Natural Human Dengue Virus Infection Reveals Distinct Molecular Events One Day before Defervescence
+# Description
+
+This repository contains all required code to reproduce the analyses in our publication.
 
 
 
-## Description
+# Installation
 
-This repository contains all required code to reproduce the analyses in our publication.     
-
-
-
-## Installation
-
-### Environment & Dependencies
+## Environment & Dependencies
 
 - [Cell Ranger](https://support.10xgenomics.com/single-cell-gene-expression/software/downloads/latest) V. 3.0.2 ([Docker](https://hub.docker.com/r/jantarika/cellranger_denguetimecourse) is available) 
 
@@ -24,15 +20,15 @@ Downstream analyses use R studio V. 4.0.2 and the packages ([Docker](https://hub
 
 
 
-## Data
+# Data
 
 Raw files are deposited in ArrayExpress, under accession number [E-MTAB-9467](https://www.ebi.ac.uk/arrayexpress/experiments/E-MTAB-9467/)
 
 
 
-## Data Mapping 
+# Data Mapping 
 
-[Cell Ranger](https://support.10xgenomics.com/single-cell-gene-expression/software/downloads/latest) V. 3.0.2 and human reference GRCh38-1.2.0 are applied 
+[Cell Ranger](https://support.10xgenomics.com/single-cell-gene-expression/software/downloads/latest) V. 3.0.2 and human reference GRCh38-1.2.0 are applied Downstream analyses
 
 Running command as follows: 
 
@@ -47,7 +43,7 @@ cellranger count --id=sample id \
 
 
 
-## Downstream analyses
+# Downstream analyses
 
 1. Quality control 
    - Correct the expression profiles using SoupX
