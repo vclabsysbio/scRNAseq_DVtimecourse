@@ -22,7 +22,7 @@ Raw files are deposited in ArrayExpress, under accession number E-MTAB-9467
 
 # Data Mapping 
 
-Docker is provided ([link to Docker](https://hub.docker.com/r/jantarika/rstudio_denguetimecourse))
+[Docker](https://hub.docker.com/r/jantarika/cellranger_denguetimecourse) is provided
 
 [Cell Ranger](https://support.10xgenomics.com/single-cell-gene-expression/software/downloads/latest) V. 3.0.2 and human reference GRCh38-1.2.0 are applied 
 
@@ -39,7 +39,7 @@ cellranger count --id= sample id \
 
 # Workflow of downstream analyses
 
-Docker is provided (link to Docker)
+[Docker](https://hub.docker.com/r/jantarika/rstudio_denguetimecourse) is provided
 
 1. Quality control 
    - Correct the expression profiles using SoupX
