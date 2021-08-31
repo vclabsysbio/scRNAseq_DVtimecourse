@@ -3,17 +3,17 @@
 
 ## Description  
 
-This repository contains all required code to reproduce the analyses in our publication.
+This repository contains the required codes to perform scRNA-sequencing analysis in our publication entitled "Single-cell Temporal Analysis of Natural Human Dengue Virus Infection Reveals Expansion of Skin Homing Lymphocyte Subsets One Day before Defervescence"
 
 
 ## Data
 
-Data was deposited in ArrayExpress, under accession number [E-MTAB-9467](https://www.ebi.ac.uk/arrayexpress/experiments/E-MTAB-9467/)
+Data was deposited in the ArrayExpress repository, under the accession number [E-MTAB-9467](https://www.ebi.ac.uk/arrayexpress/experiments/E-MTAB-9467/)
 
 
 ## Raw data processing 
 
-[Cell Ranger (v.3.0.2)](https://support.10xgenomics.com/single-cell-gene-expression/software/downloads/latest) and the reference human genome GRCh38 1.2.0 were applied for read mapping and UMI qualification
+Sequenced data were analysed using [CellRanger (v.3.0.2)](https://support.10xgenomics.com/single-cell-gene-expression/software/downloads/latest) and reference human genome GRCh38 1.2.0
 
 ```bash
 cellranger count --id=sample id \
