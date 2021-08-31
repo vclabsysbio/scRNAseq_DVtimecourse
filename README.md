@@ -1,32 +1,18 @@
-# Description : test
+# Description : 
 
 This repository contains all required code to reproduce the analyses in our publication.
 
 
-
-# Installation
-
-## Environment & Dependencies
-
-- [Cell Ranger](https://support.10xgenomics.com/single-cell-gene-expression/software/downloads/latest) V. 3.0.2 ([Docker](https://hub.docker.com/r/jantarika/cellranger_denguetimecourse) is available) 
-
-Downstream analyses use R studio V. 4.0.2 and the packages ([Docker](https://hub.docker.com/r/jantarika/rstudio_denguetimecourse) is available): 
-
-- [SoupX](https://github.com/constantAmateur/SoupX) V. 1.4.5
-- [DoubletFinder](https://github.com/chris-mcginnis-ucsf/DoubletFinder) V. 2.0.3
-- [Seurat](https://satijalab.org/seurat/) V. 3.1.2
-- [Monocle3](https://cole-trapnell-lab.github.io/monocle3/docs/installation/) V. 0.2.3.0
-- [gProfiler2](https://biit.cs.ut.ee/gprofiler/page/r) V. 0.1.9
-
-
-
 # Data
 
-Raw files are deposited in ArrayExpress, under accession number [E-MTAB-9467](https://www.ebi.ac.uk/arrayexpress/experiments/E-MTAB-9467/)
+Data was deposited in ArrayExpress, under accession number [E-MTAB-9467](https://www.ebi.ac.uk/arrayexpress/experiments/E-MTAB-9467/)
 
 
+# Raw data processing 
 
-# Data Mapping 
+[Cell Ranger](https://support.10xgenomics.com/single-cell-gene-expression/software/downloads/latest) V. 3.0.2 (10x Genomics) and the reference human genome GRCh38 1.2.0 were applied for read mapping and UMI qualification
+
+Sequenced data were assessed for their overall sequencing qualities using FastQC (Andrews, 2010), and analysed using [Cell Ranger](https://support.10xgenomics.com/single-cell-gene-expression/software/downloads/latest) V. 3.0.2 (10x Genomics) and the reference human genome GRCh38 1.2.0
 
 [Cell Ranger](https://support.10xgenomics.com/single-cell-gene-expression/software/downloads/latest) V. 3.0.2 and human reference GRCh38-1.2.0 are applied Downstream analyses
 
@@ -41,6 +27,14 @@ cellranger count --id=sample id \
                  --expect-cells=5000
 ```
 
+# R scripts
+R sctipts for data analysis in the pubication including;
+  - Part 01 : Pre-procseeing and quality controls
+    We processed data from cellranger filtered quantification matrix and applied the standard pipeline from [Seurat (v.3.1.2)](https://satijalab.org/seurat/) for data normalisation, clustering and dimensionality reduction. To remove the potential contamination of ambient RNAs and doublets, [SoupX (v.1.4.5)](https://github.com/constantAmateur/SoupX) and [DoubletFinder (v.2.0.3)](https://github.com/chris-mcginnis-ucsf/DoubletFinder) were performed to each sample before data integration.
+  - Part 02 : Data integration
+  - Part 03 : Highly variable genes (“HVGs”) and Biological Process (BP) analyses
+  - Part 04 : Trajectory and pseudotime analyses
+    
 
 
 # Downstream analyses
@@ -65,6 +59,32 @@ cellranger count --id=sample id \
    - Create Monocle's object using the information from Seurat's object 
    - Set Naive at the root of pseudotime for CD4+ T and B cell subpopulations
    - Set Effector CD8-3 at the root for effector CD8+ T cell subpopulations
+
+
+# Installation
+
+## Environments and Dependencies
+
+- [Cell Ranger (v.3.0.2)](https://support.10xgenomics.com/single-cell-gene-expression/software/downloads/latest) V. 3.0.2 ([Docker](https://hub.docker.com/r/jantarika/cellranger_denguetimecourse) is available) 
+
+R studio v.4.0.2 and the packages ([Docker](https://hub.docker.com/r/jantarika/rstudio_denguetimecourse) is available): 
+
+- [SoupX](https://github.com/constantAmateur/SoupX) V. 1.4.5
+- [DoubletFinder](https://github.com/chris-mcginnis-ucsf/DoubletFinder) V. 2.0.3
+- [Seurat](https://satijalab.org/seurat/) V. 3.1.2
+- [Monocle3](https://cole-trapnell-lab.github.io/monocle3/docs/installation/) V. 0.2.3.0
+- [gProfiler2](https://biit.cs.ut.ee/gprofiler/page/r) V. 0.1.9
+
+Data analyses were performed on Ubuntu 16.04.6 LTS
+
+
+
+
+
+
+
+
+
 
 
 
