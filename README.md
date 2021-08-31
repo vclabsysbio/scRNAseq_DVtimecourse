@@ -1,17 +1,17 @@
 
-# test
+# scRNAseq_DENVtimecourse
 
 ## Description  
 
 This repository contains all required code to reproduce the analyses in our publication.
 
 
-# Data
+## Data
 
 Data was deposited in ArrayExpress, under accession number [E-MTAB-9467](https://www.ebi.ac.uk/arrayexpress/experiments/E-MTAB-9467/)
 
 
-# Raw data processing 
+## Raw data processing 
 
 [Cell Ranger](https://support.10xgenomics.com/single-cell-gene-expression/software/downloads/latest) V. 3.0.2 (10x Genomics) and the reference human genome GRCh38 1.2.0 were applied for read mapping and UMI qualification
 
@@ -30,7 +30,7 @@ cellranger count --id=sample id \
                  --expect-cells=5000
 ```
 
-# R scripts
+## R scripts
 R sctipts for data analysis in the pubication including;
   - Part 01 : Pre-procseeing and quality controls
     We processed data from cellranger filtered quantification matrix and applied the standard pipeline from [Seurat (v.3.1.2)](https://satijalab.org/seurat/) for data normalisation, clustering and dimensionality reduction. To remove the potential contamination of ambient RNAs and doublets, [SoupX (v.1.4.5)](https://github.com/constantAmateur/SoupX) and [DoubletFinder (v.2.0.3)](https://github.com/chris-mcginnis-ucsf/DoubletFinder) were performed to each sample before data integration.
@@ -40,7 +40,7 @@ R sctipts for data analysis in the pubication including;
     
 
 
-# Downstream analyses
+## Downstream analyses
 
 1. Quality control 
    - Correct the expression profiles using SoupX
@@ -64,7 +64,7 @@ R sctipts for data analysis in the pubication including;
    - Set Effector CD8-3 at the root for effector CD8+ T cell subpopulations
 
 
-# Installation
+## Installation
 
 ## Environments and Dependencies
 
