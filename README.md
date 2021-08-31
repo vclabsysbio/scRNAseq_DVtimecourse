@@ -13,13 +13,7 @@ Data was deposited in ArrayExpress, under accession number [E-MTAB-9467](https:/
 
 ## Raw data processing 
 
-[Cell Ranger](https://support.10xgenomics.com/single-cell-gene-expression/software/downloads/latest) V. 3.0.2 (10x Genomics) and the reference human genome GRCh38 1.2.0 were applied for read mapping and UMI qualification
-
-Sequenced data were assessed for their overall sequencing qualities using FastQC (Andrews, 2010), and analysed using [Cell Ranger](https://support.10xgenomics.com/single-cell-gene-expression/software/downloads/latest) V. 3.0.2 (10x Genomics) and the reference human genome GRCh38 1.2.0
-
-[Cell Ranger](https://support.10xgenomics.com/single-cell-gene-expression/software/downloads/latest) V. 3.0.2 and human reference GRCh38-1.2.0 are applied Downstream analyses
-
-Running command as follows: 
+[Cell Ranger (v.3.0.2)](https://support.10xgenomics.com/single-cell-gene-expression/software/downloads/latest) and the reference human genome GRCh38 1.2.0 were applied for read mapping and UMI qualification
 
 ```bash
 cellranger count --id=sample id \
@@ -31,10 +25,11 @@ cellranger count --id=sample id \
 ```
 
 ## R scripts
-R sctipts for data analysis in the pubication including;
+R sctipts for data analyses in this pubication including
   - Part 01 : Pre-procseeing and quality controls
-    We processed data from cellranger filtered quantification matrix and applied the standard pipeline from [Seurat (v.3.1.2)](https://satijalab.org/seurat/) for data normalisation, clustering and dimensionality reduction. To remove the potential contamination of ambient RNAs and doublets, [SoupX (v.1.4.5)](https://github.com/constantAmateur/SoupX) and [DoubletFinder (v.2.0.3)](https://github.com/chris-mcginnis-ucsf/DoubletFinder) were performed to each sample before data integration.
-  - Part 02 : Data integration
+              We processed data from cellranger filtered quantification matrix and applied the standard pipeline from [Seurat (v.3.1.2)](https://satijalab.org/seurat/) for data normalisation, clustering and dimensionality reduction. To remove the potential contamination of ambient RNAs and doublets, [SoupX (v.1.4.5)](https://github.com/constantAmateur/SoupX) and [DoubletFinder (v.2.0.3)](https://github.com/chris-mcginnis-ucsf/DoubletFinder) were performed to each sample before data integration.
+  - Part 02 : Data normalisation and integration
+              The SCTransform from [Seurat (v.3.1.2)](https://satijalab.org/seurat/) was used for normalisation prior to integration. 
   - Part 03 : Highly variable genes (“HVGs”) and Biological Process (BP) analyses
   - Part 04 : Trajectory and pseudotime analyses
     
