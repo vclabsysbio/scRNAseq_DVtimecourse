@@ -8,7 +8,7 @@ This repository contains the required codes to perform scRNA-sequencing analysis
 
 ## Data
 
-Data was deposited in the ArrayExpress repository, under the accession number [E-MTAB-9467](https://www.ebi.ac.uk/arrayexpress/experiments/E-MTAB-9467/)
+Data was deposited in the ArrayExpress repository under the accession number [E-MTAB-9467](https://www.ebi.ac.uk/arrayexpress/experiments/E-MTAB-9467/)
 
 
 ## Raw data processing 
@@ -27,7 +27,7 @@ cellranger count --id = <sample_id> \
 ## R scripts
 R sctipts for data analysis in this pubication including
   - Part 01 : Pre-procseeing and quality controls
-              We processed data from cellranger filtered quantification matrix and applied the standard pipeline from [Seurat (v.3.1.2)](https://satijalab.org/seurat/) for data normalisation, clustering and dimensionality reduction. To remove the potential contamination of ambient RNAs and doublets, [SoupX (v.1.4.5)](https://github.com/constantAmateur/SoupX) and [DoubletFinder (v.2.0.3)](https://github.com/chris-mcginnis-ucsf/DoubletFinder) were performed to each sample before data integration.
+  We processed data from cellranger filtered quantification matrix and applied the standard pipeline from [Seurat (v.3.1.2)](https://satijalab.org/seurat/) for data normalisation, clustering and dimensionality reduction. To remove the potential contamination of ambient RNAs and doublets, [SoupX (v.1.4.5)](https://github.com/constantAmateur/SoupX) and [DoubletFinder (v.2.0.3)](https://github.com/chris-mcginnis-ucsf/DoubletFinder) were performed in each sample before data integration.
   - Part 02 : Data normalisation and integration
               The SCTransform from [Seurat (v.3.1.2)](https://satijalab.org/seurat/) was used for normalisation prior to integration. 
   - Part 03 : Highly variable genes (“HVGs”) and Biological Process (BP) analyses
@@ -59,19 +59,19 @@ R sctipts for data analysis in this pubication including
    - Set Effector CD8-3 at the root for effector CD8+ T cell subpopulations
 
 
-## Installation
 
 ## Environments and Dependencies
 
-- [Cell Ranger (v.3.0.2)](https://support.10xgenomics.com/single-cell-gene-expression/software/downloads/latest) V. 3.0.2 ([Docker](https://hub.docker.com/r/jantarika/cellranger_denguetimecourse) is available) 
+- [Cell Ranger (v.3.0.2)](https://support.10xgenomics.com/single-cell-gene-expression/software/downloads/latest) : [Docker](https://hub.docker.com/r/jantarika/cellranger_denguetimecourse) is available
 
-R studio v.4.0.2 and the packages ([Docker](https://hub.docker.com/r/jantarika/rstudio_denguetimecourse) is available): 
 
-- [SoupX](https://github.com/constantAmateur/SoupX) V. 1.4.5
-- [DoubletFinder](https://github.com/chris-mcginnis-ucsf/DoubletFinder) V. 2.0.3
-- [Seurat](https://satijalab.org/seurat/) V. 3.1.2
-- [Monocle3](https://cole-trapnell-lab.github.io/monocle3/docs/installation/) V. 0.2.3.0
-- [gProfiler2](https://biit.cs.ut.ee/gprofiler/page/r) V. 0.1.9
+R studio v.4.0.2 and the packages : [Docker](https://hub.docker.com/r/jantarika/rstudio_denguetimecourse) is available
+
+- [SoupX (v.1.4.5)](https://github.com/constantAmateur/SoupX) 
+- [DoubletFinder (v.2.0.3)](https://github.com/chris-mcginnis-ucsf/DoubletFinder) 
+- [Seurat (v.3.1.2)](https://satijalab.org/seurat/) 
+- [Monocle3 (v.0.2.3.0)](https://cole-trapnell-lab.github.io/monocle3/docs/installation/) 
+- [gProfiler2 (v.0.1.9)](https://biit.cs.ut.ee/gprofiler/page/r) 
 
 Data analyses were performed on Ubuntu 16.04.6 LTS
 
