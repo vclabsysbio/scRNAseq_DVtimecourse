@@ -1,16 +1,24 @@
-#!/usr/bin/env Rscript
-# Download libraries
+# scRNAseq_DENVtimecourse Project
+# Part 01 : Pre-procseeing and quality controls
+# author : Jantarika Kumar Arora
+
+
+# ------------------------------------------
+# README
+# ------------------------------------------
+# This script is for excluding the low-quality cells and creating the object for integration step
+# Corrected expression matrix from SoupX is used as the input
+# To get corrected expression matrix, user can be either run "SoupX.R" 
+
+
+# ------------------------------------------
+# Load required libraries 
+# ------------------------------------------
 library(Seurat)
 library(DoubletFinder)
 library(stringr)
 library(dplyr)
 library(tidyverse)
-
-
-### READ ME ####
-# This script is for excluding the low-quality cells and create the object for integration step
-# Corrected expression matrix from SoupX is used as the input
-# To get corrected expression matrix, user can be either run "SoupX.R" script or download the files in A-XXXX-n
 
 # Function for running the standard pre-processing on Seurat object
 Standard_PreProcessing_QC <- function(input){
