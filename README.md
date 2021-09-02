@@ -28,10 +28,10 @@ cellranger count --id = <sample_id> \
 R scripts for data analysis in this publication including
   - **Part01** : Pre-processing steps and quality control of each sample  
   The standard pipeline from [Seurat (v.3.1.2)](https://satijalab.org/seurat/) was applied for data normalisation, clustering and dimensionality reduction. To remove the potential contamination of ambient RNAs and doublets, [SoupX (v.1.4.5)](https://github.com/constantAmateur/SoupX) and [DoubletFinder (v.2.0.3)](https://github.com/chris-mcginnis-ucsf/DoubletFinder) were performed before integrating the data.
-  - **Part02** : Data normalisation and integration
-  -              The SCTransform from [Seurat (v.3.1.2)](https://satijalab.org/seurat/) was used for normalisation prior to integration. 
-  - **Part03** : Highly variable genes (HVGs) and biological process (BP) analyses (Figure 2A-C)
-  -              The Principal Component Analysis (PCA) was performed (Figure 2A). The union of the top 500 genes from PC1 and PC2 (HVGs) were then used to construct the heatmap (Figure 2B). The HVG and BP analyses of each immune cell type (Figure 2C) were used the same Rscript, except PCA and HVGs were constructed using the integrated data from each cell type.
+  - **Part02** : Data normalisation and integration  
+  The SCTransform from [Seurat (v.3.1.2)](https://satijalab.org/seurat/) was used for normalisation prior to integration. 
+  - **Part03** : Highly variable genes (HVGs) and biological process (BP) analyses (Figure 2A-C)  
+  The Principal Component Analysis (PCA) was performed (Figure 2A). The union of the top 500 genes from PC1 and PC2 (HVGs) were then used to construct the heatmap (Figure 2B). The HVG and BP analyses of each immune cell type (Figure 2C) were used the same Rscript, except PCA and HVGs were constructed using the integrated data from each cell type.
   - **Part04** : Trajectory and pseudotime analyses (Figure 3E)
     
 
