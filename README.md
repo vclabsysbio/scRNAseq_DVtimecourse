@@ -27,7 +27,7 @@ cellranger count --id = <sample_id> \
 ## R scripts
 R scripts for data analysis in this publication including
   - **Part01** : Pre-processing steps and quality control of each sample
-  -              The standard pipeline from [Seurat (v.3.1.2)](https://satijalab.org/seurat/) was applied for data normalisation, clustering and dimensionality reduction. To remove the potential contamination of ambient RNAs and doublets, [SoupX (v.1.4.5)](https://github.com/constantAmateur/SoupX) and [DoubletFinder (v.2.0.3)](https://github.com/chris-mcginnis-ucsf/DoubletFinder) were performed before integrating the data.
+The standard pipeline from [Seurat (v.3.1.2)](https://satijalab.org/seurat/) was applied for data normalisation, clustering and dimensionality reduction. To remove the potential contamination of ambient RNAs and doublets, [SoupX (v.1.4.5)](https://github.com/constantAmateur/SoupX) and [DoubletFinder (v.2.0.3)](https://github.com/chris-mcginnis-ucsf/DoubletFinder) were performed before integrating the data.
   - **Part02** : Data normalisation and integration
   -              The SCTransform from [Seurat (v.3.1.2)](https://satijalab.org/seurat/) was used for normalisation prior to integration. 
   - **Part03** : Highly variable genes (“HVGs”) and biological process (BP) analyses (Figure 2)
@@ -37,10 +37,10 @@ R scripts for data analysis in this publication including
 
 ## Environments and Dependencies
 
-- [Cell Ranger (v.3.0.2)](https://support.10xgenomics.com/single-cell-gene-expression/software/downloads/latest) : [Docker](https://hub.docker.com/r/jantarika/cellranger_denguetimecourse) is available
+- [Cell Ranger (v.3.0.2)](https://support.10xgenomics.com/single-cell-gene-expression/software/downloads/latest) ; [Docker](https://hub.docker.com/r/jantarika/cellranger_denguetimecourse) is available
 
 
-R studio v.4.0.2 and the packages : [Docker](https://hub.docker.com/r/jantarika/rstudio_denguetimecourse) is available
+R studio v.4.0.2 and the packages ; [Docker](https://hub.docker.com/r/jantarika/rstudio_denguetimecourse) is available
 
 - [SoupX (v.1.4.5)](https://github.com/constantAmateur/SoupX) 
 - [DoubletFinder (v.2.0.3)](https://github.com/chris-mcginnis-ucsf/DoubletFinder) 
