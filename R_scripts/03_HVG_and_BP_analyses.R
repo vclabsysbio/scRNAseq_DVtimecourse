@@ -8,7 +8,7 @@
 # ------------------------------------------
 # This script shows how to calculate the pearson correlation, HVG, heatmap, and BP analyses.
 # The integrated data generated from part02 was used as the input
-
+# The HVG and BP analyses of each immune cell type (Figure 2C) were used the same Rscript, except PCA and HVGs were constructed using the integrated data from each cell type.
 
 # ------------------------------------------
 # Load required libraries 
@@ -78,7 +78,7 @@ out_heatmap <- Heatmap(parallelDist_dtw_log2_de_or%>%remove_rownames()%>%column_
 draw(out_heatmap+DF_cluster_annotation, row_split = parallelDist_dtw_log2_de_or$cluster)
 
 
-# BP analyses
+# BP analyses (Figure 2B)
 # Create the input
 # Note that : the number of clusters is corresponding to numbers of clusters on heatmap
 input_GO <-list(cluster1=row_cutree %>% rownames_to_column() %>% filter(cluster=="1")%>%select(rowname)%>%unlist%>%as.character(), cluster2=row_cutree %>% rownames_to_column() %>% filter(cluster=="2")%>%select(rowname)%>%unlist%>%as.character(), cluster3=row_cutree %>% rownames_to_column() %>% filter(cluster=="3")%>%select(rowname)%>%unlist%>%as.character(), cluster4=row_cutree %>% rownames_to_column() %>% filter(cluster=="4")%>%select(rowname)%>%unlist%>%as.character(), cluster5=row_cutree %>% rownames_to_column() %>% filter(cluster=="5")%>%select(rowname)%>%unlist%>%as.character(),
