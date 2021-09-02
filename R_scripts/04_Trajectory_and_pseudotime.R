@@ -1,5 +1,5 @@
 # scRNAseq_DENVtimecourse Project
-# Part -- : Trajectory and pseudotime analyses
+# Part 04 : Trajectory and pseudotime analyses
 # Author : Jantarika Kumar Arora
 
 
