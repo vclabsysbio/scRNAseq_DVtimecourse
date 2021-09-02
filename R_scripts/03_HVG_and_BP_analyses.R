@@ -1,5 +1,18 @@
-#!/usr/bin/env Rscript
-# Download Library
+# scRNAseq_DENVtimecourse Project
+# Part 03 : Highly variable genes (HVGs) and biological process (BP) analyses (Figure 2)
+# Author : Jantarika Kumar Arora
+
+
+# ------------------------------------------
+# README
+# ------------------------------------------
+# This script represents the steps of data normalisation and integration using Seurat package v.3.1.2
+# The processed data generated from part 01 were used as the input
+
+
+# ------------------------------------------
+# Load required libraries 
+# ------------------------------------------
 library(Seurat)
 library(tidyverse)
 library(reshape2)
