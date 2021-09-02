@@ -139,3 +139,5 @@ sc_Seurat$severity_time <- paste(sc_Seurat$severity, sc_Seurat$severity)
 
 # Save object for the next step, data integration. 
 saveRDS(sc_Seurat , file = "/PATH_TO_DIRECTORY/OBJECT_NAME.rds")
+
+
