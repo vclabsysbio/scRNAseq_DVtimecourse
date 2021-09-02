@@ -55,7 +55,7 @@ new_cds <- cluster_cells(new_cds,reduction_method = "UMAP",cluster_method = "lou
 new_cds <- learn_graph(new_cds)
 new_cds <- order_cells(new_cds)
 
-# Visualize pseudotime on UMAP
+# Visualise pseudotime on UMAP
 plot_cells(new_cds,
            color_cells_by = "pseudotime",
            label_cell_groups=F,
@@ -66,7 +66,7 @@ plot_cells(new_cds,
            label_groups_by_cluster = F)
 
 
-# Visualize the expression of interest gene across pseudotime
+# Visualise the expression of interest gene across pseudotime
 # Extract pseudotime values
 pT <-data.frame(pseudotime_coordinate=pseudotime(new_cds))
 
