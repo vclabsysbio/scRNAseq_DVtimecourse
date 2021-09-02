@@ -1,6 +1,6 @@
 # scRNAseq_DENVtimecourse Project
 # Part 01 : Pre-processing steps and quality controls
-# author : Jantarika Kumar Arora
+# Author : Jantarika Kumar Arora
 
 
 # ------------------------------------------
