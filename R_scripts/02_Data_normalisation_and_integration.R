@@ -7,7 +7,7 @@
 # README
 # ------------------------------------------
 # This script represents the steps of data normalisation and integration using Seurat package v.3.1.2
-# The processed data generated from part 01 were used as the input.
+# The processed data generated from part 01 were used as the input
 
 
 # ------------------------------------------
