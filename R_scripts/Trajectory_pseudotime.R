@@ -68,17 +68,17 @@ plot_cells(new_cds,
 
 # Visualize the expression of interest gene across pseudotime
 # Extract pseudotime values
-pT<-data.frame(pseudotime_coordinate=pseudotime(new_cds))
+pT <-data.frame(pseudotime_coordinate=pseudotime(new_cds))
 
 # Extract cell types, times, expression matrices 
-cell_types  <- sc_integrated_subpops@meta.data %>% data.frame %>% rownames_to_column() %>% select( rowname , Cell_Types )
+cell_types <- sc_integrated_subpops@meta.data %>% data.frame %>% rownames_to_column() %>% select( rowname , Cell_Types )
 times <- sc_integrated_subpops@meta.data %>% data.frame %>% rownames_to_column() %>% select( rowname , time )
 expression_table <-GetAssayData(object = sc_integrated_subpops, assay = "RNA" , slot = "data") %>% data.frame %>% rownames_to_column()
 
 # Select genes of interest
 selected_gene_table <- expression_table%>%filter(rowname %in% c("GLG1", "CCR10", "SELPLG" , "ITGAE", "ITGB2" , "FABP2"  , "FABP5"   ,"CCR9", "ITGB7" , "CCR7", "CXCR4", "SELL" , "CXCR3" , "CCR2")) %>% column_to_rownames() %>% t %>% data.frame() %>%rownames_to_column
 
-expression_table_with_pseudotime <-pT%>%rownames_to_column%>%left_join(selected_gene_table,by="rowname")%>%left_join(cell_types,by="rowname") %>%left_join(times,by="rowname")
+expression_table_with_pseudotime <- pT%>%rownames_to_column%>%left_join(selected_gene_table,by="rowname")%>%left_join(cell_types,by="rowname") %>%left_join(times,by="rowname")
 
 # Figure 3E
 color_RN <- c("orange", "red", "#EA8331" )
