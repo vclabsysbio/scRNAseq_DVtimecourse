@@ -40,10 +40,12 @@ R scripts for data analysis in this publication including
 
 ## Environments and Dependencies
 
-- [Cell Ranger (v.3.0.2)](https://support.10xgenomics.com/single-cell-gene-expression/software/downloads/latest) ; [Docker](https://hub.docker.com/r/jantarika/cellranger_denguetimecourse) is available
+- [Cell Ranger (v.3.0.2)](https://support.10xgenomics.com/single-cell-gene-expression/software/downloads/latest)   
+[Docker](https://hub.docker.com/r/jantarika/cellranger_denguetimecourse) is available
 
 
-R studio v.4.0.2 and the packages ; [Docker](https://hub.docker.com/r/jantarika/rstudio_denguetimecourse) is available
+R studio v.4.0.2 and the packages used in this publication  
+[Docker](https://hub.docker.com/r/jantarika/rstudio_denguetimecourse) is available
 
 - [SoupX (v.1.4.5)](https://github.com/constantAmateur/SoupX) 
 - [DoubletFinder (v.2.0.3)](https://github.com/chris-mcginnis-ucsf/DoubletFinder) 
